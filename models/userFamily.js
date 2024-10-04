@@ -3,8 +3,11 @@ module.exports = (Sequelize, sequelize, DataTypes) => {
     "userFamily",
     {
       ...require("./cors")(Sequelize, DataTypes),
-      userFamilyName: DataTypes.STRING(255),
-      allowNull: false,
+
+      userFamilyName: {
+        type: DataTypes.STRING(255),
+        allowNull: false,
+      },
     },
     {
       tableName: "userFamily",
