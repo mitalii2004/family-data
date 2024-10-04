@@ -6,16 +6,16 @@ module.exports = (Sequelize, sequelize, DataTypes) => {
       userId: {
         type: DataTypes.INTEGER,
         references: {
-          model: users,
+          model: "users",
           key: "id",
         },
         onUpdate: "CASCADE",
         onDelete: "CASCADE",
       },
       userImage: {
-        type: DataTypes.BLOB,
+        type: DataTypes.STRING(255),
         references: {
-          model: users,
+          model: "users",
           key: "id",
         },
         onUpdate: "CASCADE",

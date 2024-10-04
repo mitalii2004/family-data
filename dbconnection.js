@@ -6,8 +6,8 @@ const sequelize = new Sequelize("cqlsys1", "root", "mitali@202018", {
 const connectionDB = async () => {
   await sequelize
     .authenticate()
-    .then(() => {
-      sequelize.sync({ alert: false });
+    .then(async() => {
+      await sequelize.sync({ alert: false });
     })
     .catch((err) => {
       console.log(err);

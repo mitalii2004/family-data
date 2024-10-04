@@ -3,6 +3,6 @@ const sequelize = require("../dbconnection").sequelize;
 
 module.exports = {
   userModel: require("./users")(Sequelize, sequelize, Sequelize.DataTypes),
-  userModel: require("./userImages")(Sequelize, sequelize, Sequelize.DataTypes),
-  userModel: require("./userFamily")(Sequelize, sequelize, Sequelize.DataTypes),
+  userImageModel: require("./userImages")(Sequelize, sequelize, Sequelize.DataTypes),
+  userFamilyModel: require("./userFamily")(Sequelize, sequelize, Sequelize.DataTypes),
 };
